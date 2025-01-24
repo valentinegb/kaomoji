@@ -15,22 +15,26 @@ struct Kaomoji<'a> {
     keywords: &'a [&'a str],
 }
 
+// Try to use longer keywords, since, for example, "joy" will still match
+// "joyful" since it's contained in it, but "joyful" would not match "joy".
 static KAOMOJIS: &[Kaomoji] = &[
     Kaomoji {
         text: "(* ^ ω ^)",
-        keywords: &["joy", "happy", "smile"],
+        keywords: &["joyful", "happy", "smiley"],
     },
     Kaomoji {
         text: "(´ ∀ ` *)",
-        keywords: &["joy", "happy", "smile", "grin"],
+        keywords: &["joyful", "happy", "smiley", "grinning"],
     },
     Kaomoji {
         text: "٩(◕‿◕｡)۶",
-        keywords: &["joy", "happy", "smile", "hands"],
+        keywords: &["joyful", "happy", "smiley", "hands"],
     },
     Kaomoji {
         text: "☆*:.｡.o(≧▽≦)o.｡.:*☆",
-        keywords: &["joy", "happy", "smile", "hands", "magic", "spell", "stars"],
+        keywords: &[
+            "joyful", "happy", "smiley", "hands", "magical", "spell", "stars", "sparkles",
+        ],
     },
 ];
 
@@ -40,10 +44,12 @@ async fn search<'a>(
 ) -> impl Iterator<Item = AutocompleteChoice> + use<'a> {
     KAOMOJIS.iter().enumerate().filter_map(move |(i, kaomoji)| {
         if kaomoji.text.contains(partial)
-            || kaomoji
-                .keywords
-                .iter()
-                .any(|keyword| keyword.contains(partial))
+            || partial.split_whitespace().all(|maybe_keyword| {
+                kaomoji
+                    .keywords
+                    .iter()
+                    .any(|keyword| keyword.contains(maybe_keyword))
+            })
             || partial.parse().is_ok_and(|maybe_i: usize| maybe_i == i)
         {
             Some(AutocompleteChoice::new(kaomoji.text, i))
@@ -62,7 +68,7 @@ async fn search<'a>(
 )]
 async fn kaomoji(
     ctx: Context<'_>,
-    #[description = "The kaomoji you would like"]
+    #[description = "Type keywords which describe a kaomoji, the kaomoji text itself, or the index of a kaomoji"]
     #[autocomplete = "search"]
     kaomoji: usize,
 ) -> Result<(), anyhow::Error> {
