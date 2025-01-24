@@ -4,12 +4,12 @@ The Discord kaomoji search engine.
 
 Just type `/kaomoji` and start describing the kaomoji you want!
 
-<img width="677" alt="Screenshot 2025-01-24 at 10 43 58 AM" src="https://github.com/user-attachments/assets/5206d495-b639-4ab0-9a04-ab092f27bc08" />
+<img width="663" alt="Screenshot 2025-01-24 at 3 22 34 PM" src="https://github.com/user-attachments/assets/f0c48c3c-4593-4299-a08d-7630a2bd8da8" />
 
 Then, you can copy the kaomoji with formatting characters escaped so that it
 doesn't mess with Discord's message formatting when you send it.
 
-<img width="682" alt="Screenshot 2025-01-24 at 10 45 12 AM" src="https://github.com/user-attachments/assets/a70186a0-1205-48dd-a97b-a224f0c20599" />
+<img width="684" alt="Screenshot 2025-01-24 at 3 20 23 PM" src="https://github.com/user-attachments/assets/6b9f5681-9aa0-477a-b52f-676329eff0d6" />
 
 As of **January 24th, 2025**, there are only **27** kaomojis. I'm gonna be
 adding a ton more in the coming days. (^.^')
