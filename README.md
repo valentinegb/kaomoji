@@ -20,7 +20,7 @@ the file. For example:
 
 ```rs
 static KAOMOJIS: &[Kaomoji] = &[
-    // other komojis...
+    // other kaomojis...
     Kaomoji {
         text: "(* ^ ω ^)",
         keywords: &["happy", "smiley", "cute"],
