@@ -18,19 +18,19 @@ struct Kaomoji<'a> {
 static KAOMOJIS: &[Kaomoji] = &[
     Kaomoji {
         text: "(* ^ ω ^)",
-        keywords: &["joy"],
+        keywords: &["joy", "happy", "smile"],
     },
     Kaomoji {
         text: "(´ ∀ ` *)",
-        keywords: &["joy"],
+        keywords: &["joy", "happy", "smile", "grin"],
     },
     Kaomoji {
         text: "٩(◕‿◕｡)۶",
-        keywords: &["joy"],
+        keywords: &["joy", "happy", "smile", "hands"],
     },
     Kaomoji {
         text: "☆*:.｡.o(≧▽≦)o.｡.:*☆",
-        keywords: &["joy"],
+        keywords: &["joy", "happy", "smile", "hands", "magic", "spell", "stars"],
     },
 ];
 
