@@ -77,6 +77,18 @@ static KAOMOJIS: &[Kaomoji] = &[
         keywords: &["simple", "listening", "curious", "cute"],
     },
     Kaomoji {
+        text: "(o.O)",
+        keywords: &[
+            "simple",
+            "listening",
+            "curious",
+            "cute",
+            "confused",
+            "spooked",
+            "shaken",
+        ],
+    },
+    Kaomoji {
         text: "(e_e)",
         keywords: &["simple", "unimpressed", "bored", "tired", "sleepy"],
     },
