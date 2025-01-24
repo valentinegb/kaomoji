@@ -1,9 +1,9 @@
-use anyhow::{anyhow, Context as _};
+use anyhow::Context as _;
 use poise::{
     command,
     serenity_prelude::{AutocompleteChoice, ClientBuilder, GatewayIntents},
 };
-use poise_error::{anyhow, on_error};
+use poise_error::{anyhow, on_error, UserError};
 use shuttle_runtime::SecretStore;
 use shuttle_serenity::ShuttleSerenity;
 use tracing::info;
@@ -70,7 +70,7 @@ async fn kaomoji(
         "```\n{}\n```",
         KAOMOJIS
             .get(kaomoji)
-            .ok_or(anyhow!("no kaomoji at index {kaomoji}"))?
+            .ok_or(UserError::from(format!("no kaomoji at index {kaomoji}")))?
             .text
             // Make sure kaomojis don't mess with Discord's message formatting
             .replace('*', r#"\*"#)
