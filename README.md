@@ -11,8 +11,8 @@ doesn't mess with Discord's message formatting when you send it.
 
 <img width="682" alt="Screenshot 2025-01-24 at 10 45 12 AM" src="https://github.com/user-attachments/assets/a70186a0-1205-48dd-a97b-a224f0c20599" />
 
-As of **January 24th, 2025**, there are only **4** kaomojis. I'm gonna be adding
-a ton more in the coming days. (^^')
+As of **January 24th, 2025**, there are only **27** kaomojis. I'm gonna be
+adding a ton more in the coming days. (^.^')
 
 If you'd like to, it's really easy to **add your own kaomoji**! Just open
 `src/main.rs` and add your kaomoji to the `KAOMOJIS` static item near the top of
@@ -23,7 +23,7 @@ static KAOMOJIS: &[Kaomoji] = &[
     // other komojis...
     Kaomoji {
         text: "(* ^ ω ^)",
-        keywords: &["joyful", "happy", "smiley"],
+        keywords: &["happy", "smiley", "cute"],
     },
 ];
 ```
