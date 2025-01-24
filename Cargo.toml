@@ -5,10 +5,14 @@ edition = "2021"
 publish = false
 
 [dependencies]
-anyhow = "1.0.68"
-poise = "0.6.1"
+poise = { git = "https://github.com/serenity-rs/poise.git", rev = "80a3a9c3ca1629725f0fa4ec98372d39cf36f6b6", version = "0.6.1" }
 shuttle-runtime = "0.51.0"
 # Since poise is a serenity command framework, it can run on Shuttle with shuttle-serenity
 shuttle-serenity = "0.51.0"
 tracing = "0.1.37"
 tokio = "1.26.0"
+poise_error = "1.2.0"
+
+# Ensures poise_error uses the same version of poise
+[patch.crates-io]
+poise = { git = "https://github.com/serenity-rs/poise.git", rev = "80a3a9c3ca1629725f0fa4ec98372d39cf36f6b6", version = "0.6.1" }
