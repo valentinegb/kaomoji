@@ -62,7 +62,9 @@ async fn search<'a>(
 )]
 async fn kaomoji(
     ctx: Context<'_>,
-    #[autocomplete = "search"] kaomoji: usize,
+    #[description = "The kaomoji you would like"]
+    #[autocomplete = "search"]
+    kaomoji: usize,
 ) -> Result<(), anyhow::Error> {
     ctx.say(format!(
         "```\n{}\n```",
