@@ -90,11 +90,11 @@ static KAOMOJIS: &[Kaomoji] = &[
     },
     Kaomoji {
         text: "(`Д´)",
-        keywords: &["angry", "enraged", "outraged"],
+        keywords: &["angry", "enraged", "outraged", "mad"],
     },
     Kaomoji {
         text: "(益)",
-        keywords: &["angry", "enraged", "outraged"],
+        keywords: &["angry", "enraged", "outraged", "mad"],
     },
     Kaomoji {
         text: "(◕‿◕✿)",
