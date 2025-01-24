@@ -110,7 +110,7 @@ static KAOMOJIS: &[Kaomoji] = &[
     },
     Kaomoji {
         text: "(◕‿◕✿)",
-        keywords: &["happy", "smiley", "cute", "flower"],
+        keywords: &["happy", "smiley", "cute", "flower", "pretty"],
     },
     Kaomoji {
         text: "(❤ω❤)",
