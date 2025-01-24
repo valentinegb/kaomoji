@@ -31,8 +31,7 @@ static KAOMOJIS: &[Kaomoji] = &[
 Next, you have to make a GitHub pull request. If you're not comfortable editing
 code and making a pull request, you can also **just ask me to add a kaomoji**
 and usually I will! You can [create an issue], [message me on Discord], or
-[email me].
+email me at <valentinegb@icloud.com>.
 
 [create an issue]: https://github.com/valentinegb/kaomoji/issues/new
 [message me on Discord]: https://discord.com/users/1016154932354744330
-[email me]: valentinegb@icloud.com
