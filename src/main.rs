@@ -192,18 +192,21 @@ async fn kaomoji(
     ctx: Context<'_>,
     #[description = "Type keywords which describe a kaomoji, the kaomoji text itself, or the index of a kaomoji"]
     #[autocomplete = "search"]
-    kaomoji: usize,
+    index: usize,
 ) -> Result<(), anyhow::Error> {
+    let kaomoji = KAOMOJIS
+        .get(index)
+        .ok_or(UserError::from(format!("no kaomoji at index {index}")))?;
+
     ctx.say(format!(
-        "```\n{}\n```",
-        KAOMOJIS
-            .get(kaomoji)
-            .ok_or(UserError::from(format!("no kaomoji at index {kaomoji}")))?
+        "```\n{}\n```\n-# **Index:** {index}\n-# **Keywords:** {}",
+        kaomoji
             .text
             // Make sure kaomojis don't mess with Discord's message formatting
             .replace('*', r#"\*"#)
             .replace('`', r#"\`"#)
-            .replace('_', r#"\_"#)
+            .replace('_', r#"\_"#),
+        kaomoji.keywords.join(", "),
     ))
     .await?;
 
