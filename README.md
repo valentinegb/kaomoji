@@ -11,7 +11,7 @@ doesn't mess with Discord's message formatting when you send it.
 
 <img width="684" alt="Screenshot 2025-01-24 at 3 20 23 PM" src="https://github.com/user-attachments/assets/6b9f5681-9aa0-477a-b52f-676329eff0d6" />
 
-As of **January 24th, 2025**, there are only **27** kaomojis. I'm gonna be
+As of **January 24th, 2025**, there are only **33** kaomojis. I'm gonna be
 adding a ton more in the coming days. (^.^')
 
 If you'd like to, it's really easy to **add your own kaomoji**! Just open

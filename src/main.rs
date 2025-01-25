@@ -110,7 +110,7 @@ static KAOMOJIS: &[Kaomoji] = &[
     },
     Kaomoji {
         text: "(◕‿◕✿)",
-        keywords: &["happy", "smiley", "cute", "flower", "pretty"],
+        keywords: &["happy", "smiley", "smiling", "cute", "flower", "pretty"],
     },
     Kaomoji {
         text: "(❤ω❤)",
@@ -118,45 +118,73 @@ static KAOMOJIS: &[Kaomoji] = &[
     },
     Kaomoji {
         text: "(づ ◕‿◕ )づ",
-        keywords: &["cute", "hug", "hands", "happy", "smiley"],
+        keywords: &["cute", "hug", "hands", "happy", "smiley", "smiling", "arms"],
     },
     Kaomoji {
         text: "(▰˘◡˘▰)",
-        keywords: &["content", "happy", "smiley", "blushing"],
+        keywords: &["content", "happy", "smiley", "smiling", "blushing"],
     },
     Kaomoji {
         text: "ᶘᵒᴥᵒᶅ",
         keywords: &[
-            "creature", "hands", "animal", "content", "happy", "smiley", "cute",
+            "creature", "hands", "animal", "content", "happy", "smiley", "smiling", "cute", "arms",
         ],
     },
     Kaomoji {
         text: "t(-_-t)",
         keywords: &[
-            "middle", "finger", "bird", "flip-off", "blank", "simple", "hands", "blank",
+            "middle", "finger", "bird", "flip-off", "blank", "simple", "hands", "blank", "arms",
         ],
     },
     Kaomoji {
         text: "( ͡° ͜ʖ ͡°)",
-        keywords: &["lenny", "smiley", "nose", "eyebrows", "content", "happy"],
+        keywords: &[
+            "lenny", "smiley", "smiling", "nose", "eyebrows", "content", "happy",
+        ],
     },
     Kaomoji {
         text: "(* ^ ω ^)",
-        keywords: &["happy", "smiley", "cute"],
+        keywords: &["happy", "smiley", "smiling", "cute"],
     },
     Kaomoji {
         text: "(´ ∀ ` *)",
-        keywords: &["happy", "smiley", "grinning"],
+        keywords: &["happy", "smiley", "smiling", "tired"],
     },
     Kaomoji {
         text: "٩(◕‿◕｡)۶",
-        keywords: &["happy", "smiley", "hands", "cute"],
+        keywords: &["happy", "smiley", "smiling", "hands", "cute", "arms"],
     },
     Kaomoji {
         text: "☆*:.｡.o(≧▽≦)o.｡.:*☆",
         keywords: &[
-            "happy", "smiley", "hands", "magical", "spell", "stars", "sparkles",
+            "happy", "smiley", "smiling", "hands", "magical", "spell", "stars", "sparkles",
         ],
+    },
+    Kaomoji {
+        text: "(o^▽^o)",
+        keywords: &["happy", "smiley", "smiling", "cheeks"],
+    },
+    Kaomoji {
+        text: "(⌒▽⌒)☆",
+        keywords: &["happy", "smiley", "smiling", "star", "sparkle"],
+    },
+    Kaomoji {
+        text: "<(￣︶￣)>",
+        keywords: &[
+            "happy", "smiley", "smiling", "content", "hug", "hands", "basking", "arms",
+        ],
+    },
+    Kaomoji {
+        text: "。.:☆*:･'(*⌒―⌒*)))",
+        keywords: &["content", "star", "sparkles", "magical"],
+    },
+    Kaomoji {
+        text: "ヽ(・∀・)ﾉ",
+        keywords: &["happy", "smiley", "smiling", "waving", "hands", "arms"],
+    },
+    Kaomoji {
+        text: "(´｡• ω •｡`)",
+        keywords: &["happy", "smiley", "smiling", "cheeks", "cute", "eyebrows"],
     },
 ];
 
