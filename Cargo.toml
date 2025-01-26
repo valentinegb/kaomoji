@@ -12,6 +12,7 @@ shuttle-serenity = "0.51.0"
 tracing = "0.1.37"
 tokio = "1.26.0"
 poise_error = "1.2.0"
+topgg = { version = "1.4.2", features = ["autoposter", "serenity-cached"] }
 
 # Ensures poise_error uses the same version of poise
 [patch.crates-io]

@@ -261,8 +261,23 @@ async fn main(#[shuttle_runtime::Secrets] secret_store: SecretStore) -> ShuttleS
             })
         })
         .build();
-    let client = ClientBuilder::new(discord_token, GatewayIntents::empty())
-        .framework(framework)
+    let client_builder =
+        ClientBuilder::new(discord_token, GatewayIntents::empty()).framework(framework);
+    #[cfg(not(debug_assertions))]
+    let client_builder = client_builder.event_handler_arc({
+        use std::time::Duration;
+
+        use topgg::Autoposter;
+
+        let topgg_token = secret_store
+            .get("TOPGG_TOKEN")
+            .context("`TOPGG_TOKEN` was not found")?;
+        let topgg_client = topgg::Client::new(topgg_token);
+        let autoposter = Autoposter::serenity(&topgg_client, Duration::from_secs(1800));
+
+        autoposter.handler()
+    });
+    let client = client_builder
         .await
         .map_err(shuttle_runtime::CustomError::new)?;
 
