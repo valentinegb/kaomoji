@@ -213,6 +213,13 @@ static KAOMOJIS: &[Kaomoji] = &[
             "flower",
         ],
     },
+    Kaomoji {
+        text: "(o_ _)ﾉ彡☆",
+        keywords: &[
+            "arm", "throwing", "star", "magical", "hands", "fallen", "falling", "fell", "tripped",
+            "dropped",
+        ],
+    },
 ];
 
 async fn search<'a>(
