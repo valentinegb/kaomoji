@@ -186,6 +186,12 @@ static KAOMOJIS: &[Kaomoji] = &[
         text: "(´｡• ω •｡`)",
         keywords: &["happy", "smiley", "smiling", "cheeks", "cute", "eyebrows"],
     },
+    Kaomoji {
+        text: "(￣ω￣)",
+        keywords: &[
+            "happy", "smiley", "smiling", "cute", "content", "tired", "sleepy", "sleeping",
+        ],
+    },
 ];
 
 async fn search<'a>(
