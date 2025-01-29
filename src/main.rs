@@ -200,6 +200,10 @@ static KAOMOJIS: &[Kaomoji] = &[
         text: "(o･ω･o)",
         keywords: &["cute", "smiling", "smiley", "happy", "cheeks"],
     },
+    Kaomoji {
+        text: "(＠＾◡＾)",
+        keywords: &["smiling", "smiley", "happy", "ear", "flower", "rose"],
+    },
 ];
 
 async fn search<'a>(
