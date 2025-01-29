@@ -180,7 +180,9 @@ static KAOMOJIS: &[Kaomoji] = &[
     },
     Kaomoji {
         text: "ヽ(・∀・)ﾉ",
-        keywords: &["happy", "smiley", "smiling", "waving", "hands", "arms"],
+        keywords: &[
+            "happy", "smiley", "smiling", "waving", "hands", "arms", "wave", "hug",
+        ],
     },
     Kaomoji {
         text: "(´｡• ω •｡`)",
@@ -203,6 +205,13 @@ static KAOMOJIS: &[Kaomoji] = &[
     Kaomoji {
         text: "(＠＾◡＾)",
         keywords: &["smiling", "smiley", "happy", "ear", "flower", "rose"],
+    },
+    Kaomoji {
+        text: "ヽ(*・ω・)ﾉ",
+        keywords: &[
+            "cute", "smiling", "smiley", "happy", "arms", "waving", "wave", "hug", "hands",
+            "flower",
+        ],
     },
 ];
 
